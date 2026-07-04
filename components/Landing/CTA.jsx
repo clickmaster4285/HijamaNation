@@ -111,6 +111,8 @@ function ContactForm() {
         <div>
           <label className="block text-[10px] text-[#7aaa8a] uppercase tracking-wider mb-1.5">First name</label>
           <input
+            name="firstName"
+            autoComplete="given-name"
             type="text"
             placeholder="Your first name"
             className="w-full bg-white/7 border border-white/12 rounded-lg px-3 py-2 text-[13px] text-[#f0ede8] placeholder-[#6b8a78] outline-none focus:border-[#5aad78]/50 transition-colors font-sans"
@@ -119,6 +121,8 @@ function ContactForm() {
         <div>
           <label className="block text-[10px] text-[#7aaa8a] uppercase tracking-wider mb-1.5">Last name</label>
           <input
+            name="lastName"
+            autoComplete="family-name"
             type="text"
             placeholder="Your last name"
             className="w-full bg-white/7 border border-white/12 rounded-lg px-3 py-2 text-[13px] text-[#f0ede8] placeholder-[#6b8a78] outline-none focus:border-[#5aad78]/50 transition-colors font-sans"
@@ -129,6 +133,8 @@ function ContactForm() {
       <div className="mb-3">
         <label className="block text-[10px] text-[#7aaa8a] uppercase tracking-wider mb-1.5">Email</label>
         <input
+          name="email"
+          autoComplete="email"
           type="email"
           placeholder="your@email.com"
           className="w-full bg-white/7 border border-white/12 rounded-lg px-3 py-2 text-[13px] text-[#f0ede8] placeholder-[#6b8a78] outline-none focus:border-[#5aad78]/50 transition-colors font-sans"
@@ -138,6 +144,8 @@ function ContactForm() {
       <div className="mb-3">
         <label className="block text-[10px] text-[#7aaa8a] uppercase tracking-wider mb-1.5">Phone</label>
         <input
+          name="phone"
+          autoComplete="tel"
           type="tel"
           placeholder="+44 7700..."
           className="w-full bg-white/7 border border-white/12 rounded-lg px-3 py-2 text-[13px] text-[#f0ede8] placeholder-[#6b8a78] outline-none focus:border-[#5aad78]/50 transition-colors font-sans"
@@ -147,6 +155,7 @@ function ContactForm() {
       <div className="mb-4">
         <label className="block text-[10px] text-[#7aaa8a] uppercase tracking-wider mb-1.5">Message</label>
         <textarea
+          name="message"
           rows={3}
           placeholder="How can we help you?"
           className="w-full bg-white/7 border border-white/12 rounded-lg px-3 py-2 text-[13px] text-[#f0ede8] placeholder-[#6b8a78] outline-none focus:border-[#5aad78]/50 transition-colors resize-none font-sans"

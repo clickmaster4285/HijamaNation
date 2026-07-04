@@ -130,8 +130,11 @@ export default function Navbar() {
         }`}
       >
         {/* Logo – links to homepage */}
-        <Link href="/" className="flex items-center">
-          <img src="/images/logo.png" alt="HijamaNation Logo" className="h-12 w-auto object-contain" />
+        <Link href="/" className="flex items-center gap-3">
+          <img src="/images/Logo.png" alt="HijamaNation Logo" className="h-12 w-auto object-contain" />
+          <span className="text-white text-lg font-semibold tracking-wide">
+            Hijama Nation
+          </span>
         </Link>
 
         {/* Desktop Navigation */}

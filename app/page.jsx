@@ -17,7 +17,7 @@ import CTA from "../components/Landing/CTA";
 
 // ─── Import the Trust component and its required data ─────────────
 import Trust from "../components/Landing/Trust";
-import { badges } from "../data/data";   // adjust the filename if different
+import { badges } from "../data/data";   
 import Book from "../components/Landing/Book";
 import { bookDotList } from "../data/data";
 import Practitioners from "../components/Landing/Practitioners";

@@ -63,7 +63,7 @@ function Counter({ value, suffix, isYear }) {
 
   const formattedNumber = isYear
     ? count.toString()
-    : count.toLocaleString();
+    : new Intl.NumberFormat("en-US").format(count);
 
   return (
     <span ref={ref}>
