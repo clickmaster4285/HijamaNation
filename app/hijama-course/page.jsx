@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Link from "next/link"; // ← Add this import
 
 import Hero from "../../components/HijamaCourse/Hero";
 import WhatIsCourse from "../../components/HijamaCourse/WhatIsCourse";
@@ -92,6 +93,20 @@ export default function HijamaCourse() {
 
             <div ref={glanceRef}>
                 <CourseAtGlance features={features} inView={glanceInView} />
+            </div>
+
+            {/* ─── NEW: Link to the full curriculum page ─── */}
+            <div className="py-8 px-6 md:px-12 lg:px-20 bg-white text-center border-b border-gray-100">
+                <Link
+                    href="/hijama-course/course-curriculum"
+                    className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 shadow-lg shadow-green-600/30 hover:shadow-green-600/50"
+                >
+                    <span>View Full Course Curriculum</span>
+                    <span className="text-xl">→</span>
+                </Link>
+                <p className="text-gray-500 text-sm mt-3">
+                    Explore all 8 modules, topics, and what you'll learn in detail
+                </p>
             </div>
 
             <div ref={interestedRef}>

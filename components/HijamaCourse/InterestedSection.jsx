@@ -23,7 +23,7 @@ export default function InterestedSection({ questions, inView }) {
           background-image: url(/intrested.png);
           background-size: cover;
           background-position: center;
-          opacity: 0.5;                /* ← increased from 0.28 */
+          opacity: 0.5;
           transform: scale(1.05);
           z-index: 0;
         }
@@ -32,7 +32,6 @@ export default function InterestedSection({ questions, inView }) {
           position: absolute;
           inset: 0;
           background: linear-gradient(180deg, rgba(6,10,18,0.65) 0%, rgba(6,10,18,0.4) 40%, rgba(6,10,18,0.7) 100%);
-          /* ↑ lighter overlay */
           z-index: 1;
         }
 
@@ -124,7 +123,7 @@ export default function InterestedSection({ questions, inView }) {
           align-items: flex-start;
           gap: 12px;
           padding: 16px 18px;
-          background: rgba(255,255,255,0.08);   /* slightly lighter card background */
+          background: rgba(255,255,255,0.08);
           backdrop-filter: blur(10px);
           border: 1px solid rgba(255,255,255,0.1);
           border-radius: 12px;
@@ -185,6 +184,7 @@ export default function InterestedSection({ questions, inView }) {
           background: linear-gradient(135deg, rgba(34,197,94,0.5), rgba(34,197,94,0.05) 60%);
           opacity: 0;
           transform: translateY(24px);
+          margin-top: 28px;   /* ← Added spacing between button and answer */
         }
 
         .ins-answer.show {
@@ -197,7 +197,7 @@ export default function InterestedSection({ questions, inView }) {
         }
 
         .ins-answer-inner {
-          background: rgba(10,16,26,0.7);   /* slightly more transparent */
+          background: rgba(10,16,26,0.7);
           backdrop-filter: blur(14px);
           border-radius: 19px;
           padding: 28px 32px;
@@ -229,6 +229,7 @@ export default function InterestedSection({ questions, inView }) {
           display: flex;
           justify-content: flex-end;
           margin-top: 16px;
+          margin-bottom: 4px;   /* ← Added bottom margin for extra breathing room */
         }
 
         .ins-show-more-btn {

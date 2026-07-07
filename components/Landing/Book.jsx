@@ -74,15 +74,15 @@ export default function BookSection({ dotList, inView, bgImage = null }) {
       animation: cardReveal 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     }
 
-    /* ─── Eyebrow (red) ─── */
-    .eyebrow--red {
+    /* ─── Eyebrow – using #1c7c47 (Hijama green) ─── */
+    .eyebrow--green {
       font-family: 'Inter', sans-serif;
       font-size: 11px;
       font-weight: 600;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       display: inline-block;
-      color: #e74c3c;
+      color: #1c7c47;
       margin-bottom: 8px;
     }
 
@@ -100,7 +100,7 @@ export default function BookSection({ dotList, inView, bgImage = null }) {
     .book-heading em {
       font-family: 'Playfair Display', Georgia, serif;
       font-style: italic;
-      color: #6ee7a0;
+      color: #1c7c47;
     }
 
     .book-grid {
@@ -134,18 +134,18 @@ export default function BookSection({ dotList, inView, bgImage = null }) {
       line-height: 1.6;
       color: rgba(255,255,255,0.55);
       font-style: italic;
-      border-left: 2px solid rgba(110,231,160,0.4);
+      border-left: 2px solid rgba(28,124,71,0.4);
       padding-left: 14px;
       margin: 0 0 28px;
       max-width: 460px;
     }
 
-    /* ─── Button (Hijama green + white text) ─── */
+    /* ─── Button – using #1c7c47 (Hijama green) ─── */
     .btn-primary {
       display: inline-flex;
       align-items: center;
       gap: 9px;
-      background: linear-gradient(135deg, #1c7c47, #2fa86a);
+      background: #1c7c47;
       color: #ffffff !important;
       font-family: 'Inter', sans-serif;
       font-size: 14.5px;
@@ -155,15 +155,15 @@ export default function BookSection({ dotList, inView, bgImage = null }) {
       border-radius: 0;
       text-decoration: none;
       box-shadow: 0 14px 28px -10px rgba(28,124,71,0.6);
-      transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease, filter 0.3s ease;
+      transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease, background 0.3s ease;
       border: none;
       cursor: pointer;
     }
 
     .btn-primary:hover {
       transform: translateY(-3px);
+      background: #165f38;
       box-shadow: 0 18px 34px -10px rgba(28,124,71,0.65);
-      filter: brightness(1.06);
     }
 
     .book-strip {
@@ -195,7 +195,7 @@ export default function BookSection({ dotList, inView, bgImage = null }) {
       font-family: 'Inter', sans-serif;
       font-size: 26px;
       font-weight: 800;
-      color: #6ee7a0;
+      color: #1c7c47;
       line-height: 1;
       margin-bottom: 6px;
     }
@@ -233,7 +233,7 @@ export default function BookSection({ dotList, inView, bgImage = null }) {
 
     .book-card:hover {
       transform: translateY(-5px);
-      border-color: rgba(110,231,160,0.4);
+      border-color: rgba(28,124,71,0.4);
     }
 
     .book-card-title {
@@ -280,8 +280,8 @@ export default function BookSection({ dotList, inView, bgImage = null }) {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: #6ee7a0;
-      box-shadow: 0 0 0 4px rgba(110,231,160,0.18);
+      background: #1c7c47;
+      box-shadow: 0 0 0 4px rgba(28,124,71,0.18);
     }
 
     .book-disclaimer {
@@ -317,8 +317,8 @@ export default function BookSection({ dotList, inView, bgImage = null }) {
         <div className="book-bg-overlay" />
 
         <div className="relative z-10 px-8 md:px-16 lg:px-20">
-          {/* ─── Red eyebrow ─── */}
-          <span className={`eyebrow eyebrow--red reveal ${inView ? "show" : ""}`}>
+          {/* ─── Green eyebrow ─── */}
+          <span className={`eyebrow eyebrow--green reveal ${inView ? "show" : ""}`}>
             Treatment Pathway
           </span>
 

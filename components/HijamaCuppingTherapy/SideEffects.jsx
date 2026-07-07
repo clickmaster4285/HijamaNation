@@ -27,8 +27,8 @@ const cardVariant = {
 
 export default function SideEffects() {
     return (
-        <section className="relative py-16 md:py-24 px-6 md:px-16 lg:px-20 bg-[#0a0f1a] overflow-hidden">
-            {/* Ambient glow */}
+        <section className="relative py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-[#0a0f1a] overflow-hidden">
+            {/* Ambient glow – now using green-500/10 for subtle glow */}
             <div className="pointer-events-none absolute top-1/3 -left-20 w-[380px] h-[380px] bg-green-500/[0.08] rounded-full blur-[120px]" />
 
             <motion.div
@@ -38,29 +38,30 @@ export default function SideEffects() {
                 variants={container}
                 className="relative w-full"
             >
-                {/* Two‑column grid: left content, right image */}
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
-                    {/* Left column – takes 3/5 of the space */}
+                    {/* Left column */}
                     <div className="lg:col-span-3">
+                        {/* Eyebrow – green-400 text, green-600 line */}
                         <motion.div variants={fadeUp} className="flex items-center gap-3 mb-4">
-                            <div className="w-10 h-px bg-green-500" />
+                            <div className="w-10 h-px bg-green-600" />
                             <span className="text-green-400 text-sm font-medium tracking-widest uppercase">
                                 Side Effects
                             </span>
                         </motion.div>
 
+                        {/* Heading – italic uses green-600 (matches Hero) */}
                         <motion.h2
                             variants={fadeUp}
                             className="text-3xl md:text-4xl lg:text-5xl font-serif text-white leading-tight mb-6"
                         >
-                            Possible <span className="text-green-500 italic">Side Effects</span>
+                            Possible <span className="text-green-600 italic font-medium">Side Effects</span>
                         </motion.h2>
 
                         <motion.p variants={fadeUp} className="text-white/70 text-base md:text-lg leading-relaxed max-w-2xl mb-8">
                             Some mild effects can happen after Hijama. These may include:
                         </motion.p>
 
-                        {/* Effect cards – now full width of left column */}
+                        {/* Effect cards – updated colors to match palette */}
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                             {effects.map((effect) => (
                                 <motion.div
@@ -68,13 +69,15 @@ export default function SideEffects() {
                                     variants={cardVariant}
                                     whileHover={{ y: -6 }}
                                     transition={{ type: "spring", stiffness: 280, damping: 18 }}
-                                    className="group relative px-5 py-6 bg-white/[0.04] rounded-2xl border border-white/10 hover:border-green-500/40 text-center overflow-hidden transition-colors duration-300"
+                                    className="group relative px-5 py-6 bg-white/[0.04] rounded-2xl border border-white/10 hover:border-green-400 text-center overflow-hidden transition-colors duration-300"
                                 >
                                     <span className="pointer-events-none absolute inset-0 flex items-center justify-center">
                                         <span className="w-0 h-0 rounded-full bg-green-500/25 blur-2xl scale-0 group-hover:w-40 group-hover:h-40 group-hover:scale-100 transition-all duration-500 ease-out" />
                                     </span>
                                     <div className="relative">
-                                        <div className="mx-auto mb-3 w-10 h-10 rounded-full bg-green-500/10 border border-green-500/25 flex items-center justify-center group-hover:bg-green-500/20 group-hover:scale-110 transition-all duration-300">
+                                        {/* Icon container – now using green-600/10 and green-600/25 */}
+                                        <div className="mx-auto mb-3 w-10 h-10 rounded-full bg-green-600/10 border border-green-600/25 flex items-center justify-center group-hover:bg-green-600/20 group-hover:scale-110 transition-all duration-300">
+                                            {/* Icon color – green-400 */}
                                             <svg className="w-4.5 h-4.5 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
                                                 <path strokeLinecap="round" strokeLinejoin="round" d={effect.icon} />
                                             </svg>

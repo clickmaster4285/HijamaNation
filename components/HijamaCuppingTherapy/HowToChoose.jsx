@@ -50,8 +50,8 @@ function AnimatedCheck() {
 
 export default function HowToChoose() {
     return (
-        <section className="relative py-16 md:py-24 px-6 md:px-16 lg:px-20 bg-black overflow-hidden">
-            {/* Ambient glow */}
+        <section className="relative py-16 md:py-24 px-6 md:px-16 lg:px-20 bg-gradient-to-br from-green-50 via-green-100 to-white overflow-hidden">
+            {/* Ambient glow – now using green-500/10 for subtle glow */}
             <motion.div
                 animate={{ x: [0, 20, 0], y: [0, -16, 0] }}
                 transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
@@ -68,35 +68,35 @@ export default function HowToChoose() {
                 {/* Left: intro */}
                 <div>
                     <motion.div variants={fadeUp} className="flex items-center gap-3 mb-4">
-                        <div className="w-10 h-px bg-green-500" />
-                        <span className="text-green-400 text-sm font-medium tracking-widest uppercase">
+                        <div className="w-10 h-px bg-green-600" />
+                        <span className="text-green-600 text-sm font-medium tracking-widest uppercase">
                             How to Choose
                         </span>
                     </motion.div>
 
                     <motion.h2
                         variants={fadeUp}
-                        className="text-3xl md:text-4xl lg:text-5xl font-serif text-white leading-tight mb-6"
+                        className="text-3xl md:text-4xl lg:text-5xl font-serif text-gray-900 leading-tight mb-6"
                     >
-                        How to Choose a <span className="text-green-500 italic">Hijama Clinic</span>
+                        How to Choose a <span className="text-green-600 italic font-medium">Hijama Clinic</span>
                     </motion.h2>
 
-                    <motion.p variants={fadeUp} className="text-white/70 text-base md:text-lg leading-relaxed mb-4">
+                    <motion.p variants={fadeUp} className="text-gray-700 text-base md:text-lg leading-relaxed mb-4">
                         Before booking Hijama cupping therapy, check whether the provider explains the process,
                         offers screening, follows hygiene steps, and gives aftercare advice.
                     </motion.p>
 
-                    <motion.p variants={fadeUp} className="text-white/50 text-sm md:text-base leading-relaxed">
+                    <motion.p variants={fadeUp} className="text-gray-500 text-sm md:text-base leading-relaxed">
                         A good Hijama clinic should explain the following:
                     </motion.p>
                 </div>
 
-                {/* Right: animated checklist card */}
+                {/* Right: animated checklist card – now with white background and green borders */}
                 <motion.div
                     variants={fadeUp}
                     whileHover={{ y: -4 }}
                     transition={{ type: "spring", stiffness: 260, damping: 20 }}
-                    className="p-6 md:p-8 bg-white/[0.04] rounded-3xl border border-white/10"
+                    className="p-6 md:p-8 bg-white rounded-3xl border border-green-200 shadow-lg shadow-green-900/5"
                 >
                     <motion.div variants={rowContainer} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} className="space-y-2">
                         {points.map((item) => (
@@ -104,12 +104,12 @@ export default function HowToChoose() {
                                 key={item}
                                 variants={rowVariant}
                                 whileHover={{ x: 4 }}
-                                className="flex items-center gap-3 px-4 py-3.5 rounded-xl border border-transparent hover:border-green-500/30 hover:bg-green-500/[0.06] transition-colors duration-300"
+                                className="flex items-center gap-3 px-4 py-3.5 rounded-xl border border-transparent hover:border-green-400 hover:bg-green-50 transition-colors duration-300"
                             >
-                                <span className="shrink-0 w-6 h-6 rounded-full bg-green-500/15 border border-green-500/40 text-green-400 flex items-center justify-center">
+                                <span className="shrink-0 w-6 h-6 rounded-full bg-green-100 border border-green-400 text-green-600 flex items-center justify-center">
                                     <AnimatedCheck />
                                 </span>
-                                <span className="text-white/80 text-sm md:text-base">{item}</span>
+                                <span className="text-gray-800 text-sm md:text-base">{item}</span>
                             </motion.div>
                         ))}
                     </motion.div>

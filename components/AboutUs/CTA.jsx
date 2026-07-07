@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function CTASection() {
   return (
     <section className="relative py-16 md:py-24 overflow-hidden">
-      {/* Full‑width card — outer border removed */}
+      {/* Full‑width card  outer border removed */}
       <div className="relative w-full rounded-3xl bg-white/[0.03] py-14 md:py-16 px-[24px] md:px-[48px] lg:px-[80px] overflow-hidden">
         {/* Soft radial glow */}
         <div className="pointer-events-none absolute inset-0 -z-10">
@@ -28,7 +28,7 @@ export default function CTASection() {
           <rect width="100%" height="100%" fill="url(#ctaLattice)" />
         </svg>
 
-        {/* Content grid — full width, not center‑constrained */}
+        {/* Content grid  full width, not center‑constrained */}
         <div className="relative grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-16 items-center w-full">
           {/* Left: text + CTAs */}
           <div>
@@ -78,14 +78,14 @@ export default function CTASection() {
             </div>
           </div>
 
-          {/* Right: themed visual — stylized cupping-cup cluster + stat card */}
+          {/* Right: themed visual  stylized cupping-cup cluster + stat card */}
           <div className="relative hidden lg:flex items-center justify-center h-full min-h-[280px]">
             <svg
               viewBox="0 0 320 280"
               className="w-full h-full max-w-[320px]"
               fill="none"
             >
-              {/* Cupping cups — overlapping circles evoking hijama cups */}
+              {/* Cupping cups  overlapping circles evoking hijama cups */}
               <circle cx="120" cy="150" r="70" stroke="#4ADE80" strokeOpacity="0.25" strokeWidth="1.5" />
               <circle cx="120" cy="150" r="70" fill="#4ADE80" fillOpacity="0.05" />
 
