@@ -11,7 +11,7 @@ import AnimatedProse from '@/components/blogs/AnimatedProse';
 import FAQAccordion from '@/components/blogs/FaqAccordion';
 import FadeIn from '@/components/blogs/FadeIn';
 import BlogCTA from '@/components/blogs/CTA';
-
+import SidebarCTA from '@/components/blogs/SideBar';
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({
     slug: post.slug,
@@ -41,14 +41,13 @@ export default async function BlogPostPage({ params }) {
     day: 'numeric',
   });
 
-  const updatedRaw = post.updatedDate || post.dateUpdated || post.lastUpdated || null;
-  const formattedUpdated = updatedRaw
-    ? new Date(updatedRaw).toLocaleDateString('en-US', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-      })
-    : null;
+  // Use updatedDate from blog data if it exists, otherwise use the current date
+  const updatedRaw = post.updatedDate || new Date().toISOString().split('T')[0];
+  const formattedUpdated = new Date(updatedRaw).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
 
   const shareUrl = `https://hijamanation.com/blog/${post.slug}`;
   const shareText = encodeURIComponent(post.title);
@@ -126,7 +125,7 @@ export default async function BlogPostPage({ params }) {
       `}</style>
 
       {/* ─── HEADER – LIGHT GREEN, EDITORIAL ─── */}
-      <header className="relative pt-20 md:pt-28 lg:pt-32 pb-12 bg-green-100 border-b border-green-800/10 overflow-hidden">
+      <header className="relative pt-32 md:pt-40 lg:pt-48 pb-12 bg-green-100 border-b border-green-800/10 overflow-hidden">
         {/* Faint dot pattern, echoing the cupping motif */}
         <div
           className="absolute inset-0 pointer-events-none opacity-[0.06]"
@@ -137,11 +136,11 @@ export default async function BlogPostPage({ params }) {
           }}
         />
 
-        {/* Left side accent — vertical rule with rotated label, framing the content column */}
+        {/* Left side accent — vertical rule with rotated label */}
         <div className="hidden lg:flex absolute inset-y-0 left-0 w-40 xl:w-52 items-center justify-center pointer-events-none">
           <div className="flex items-center gap-4 h-full py-16">
             <div className="w-px h-full bg-gradient-to-b from-transparent via-green-800/20 to-transparent" />
-            <span className="text-[11px] tracking-[0.35em] font-semibold uppercase text-green-800/40 [writing-mode:vertical-rl] rotate-180 whitespace-nowrap">
+            <span className="text-xs tracking-[0.35em] font-bold uppercase text-green-800/60 [writing-mode:vertical-rl] rotate-180 whitespace-nowrap">
               Est. Practice
             </span>
           </div>
@@ -150,7 +149,7 @@ export default async function BlogPostPage({ params }) {
         {/* Right side accent — mirrored vertical rule with rotated label */}
         <div className="hidden lg:flex absolute inset-y-0 right-0 w-40 xl:w-52 items-center justify-center pointer-events-none">
           <div className="flex items-center gap-4 h-full py-16">
-            <span className="text-[11px] tracking-[0.35em] font-semibold uppercase text-green-800/40 [writing-mode:vertical-rl] whitespace-nowrap">
+            <span className="text-xs tracking-[0.35em] font-bold uppercase text-green-800/60 [writing-mode:vertical-rl] whitespace-nowrap">
               Sunnah Wellness
             </span>
             <div className="w-px h-full bg-gradient-to-b from-transparent via-green-800/20 to-transparent" />
@@ -159,13 +158,15 @@ export default async function BlogPostPage({ params }) {
 
         <div className="relative z-10 px-8 sm:px-16 md:px-28 lg:px-40 xl:px-52">
           <div className="max-w-3xl mx-auto">
-            {/* Back link */}
-            <div className="flex justify-start mb-10">
+            {/* Back link — now more prominent and positioned lower */}
+            <div className="flex justify-start mb-12 md:mb-14">
               <Link
                 href="/blog"
-                className="inline-flex items-center gap-1.5 text-sm text-green-800/70 hover:text-green-900 transition-colors font-medium"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-green-800/5 hover:bg-green-800/10 border border-green-800/20 rounded-full text-sm font-semibold text-green-800 transition-all duration-200 hover:scale-105 hover:shadow-md group"
               >
-                <span aria-hidden="true">←</span> All posts
+                <span aria-hidden="true" className="text-lg group-hover:-translate-x-1 transition-transform duration-200">←</span> 
+                <span>All Posts</span>
+                <span className="hidden sm:inline text-green-800/40 text-xs font-normal ml-1">• Back to blog</span>
               </Link>
             </div>
 
@@ -178,8 +179,8 @@ export default async function BlogPostPage({ params }) {
               </svg>
             </div>
 
-            {/* Eyebrow */}
-            <p className="text-center text-[11px] md:text-xs tracking-[0.25em] font-semibold uppercase text-green-800/60 mb-4">
+            {/* Eyebrow — made bold */}
+            <p className="text-center text-[11px] md:text-xs tracking-[0.25em] font-bold uppercase text-green-800/70 mb-4">
               Hijama Nation Journal
             </p>
 
@@ -188,9 +189,9 @@ export default async function BlogPostPage({ params }) {
               {post.title}
             </h1>
 
-            {/* Metadata row */}
+            {/* Metadata row - shows both Updated and Published dates */}
             <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-sm text-green-900/70">
-              <span className="inline-flex items-center gap-2 font-medium text-green-950">
+              <span className="inline-flex items-center gap-2 font-bold text-green-950">
                 <span className="w-6 h-6 rounded-full bg-green-900/5 border border-green-900/10 flex items-center justify-center overflow-hidden">
                   <Image
                     src="/images/hijamalogo.png"
@@ -203,15 +204,11 @@ export default async function BlogPostPage({ params }) {
                 {post.author}
               </span>
               <span className="text-green-900/25">·</span>
-              <span>{readingTime} min read</span>
+              <span className="font-semibold">{readingTime} min read</span>
               <span className="text-green-900/25">·</span>
-              <span>Published {formattedDate}</span>
-              {formattedUpdated && (
-                <>
-                  <span className="text-green-900/25">·</span>
-                  <span>Updated {formattedUpdated}</span>
-                </>
-              )}
+              <span className="font-semibold">Updated {formattedUpdated}</span>
+              <span className="text-green-900/25">·</span>
+              <span className="font-semibold">Published {formattedDate}</span>
             </div>
           </div>
         </div>
@@ -219,84 +216,99 @@ export default async function BlogPostPage({ params }) {
 
       {/* ─── CONTENT – LIGHT GREEN, FULL WIDTH ─── */}
       <div className="relative">
-        <div className="px-8 sm:px-16 md:px-28 lg:px-40 xl:px-52 py-10 md:py-14 flex flex-col lg:flex-row gap-6 lg:gap-8 items-start bg-green-50">
-          <article className="flex-1 order-1 lg:order-1">
-            {post.image && (
-              <FadeIn>
-                <div className="relative w-full h-64 md:h-96 rounded-2xl overflow-hidden mb-10 bg-gray-200 shadow-lg">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 800px"
-                    priority
-                  />
-                </div>
-              </FadeIn>
-            )}
+        <div className="px-8 sm:px-16 md:px-28 lg:px-40 xl:px-52 py-10 md:py-14 bg-green-50">
+          {/* Image - Full width */}
+          {post.image && (
+            <FadeIn>
+              <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden mb-10 bg-gray-200 shadow-xl">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 1200px"
+                  priority
+                />
+              </div>
+            </FadeIn>
+          )}
 
-            <div className="p-6 md:p-8">
-              <AnimatedProse
-                html={articleHtml}
-                className="prose-hijama prose prose-lg max-w-none
-                           prose-headings:font-serif prose-headings:font-bold prose-headings:scroll-mt-28
-                           prose-a:text-green-700 prose-a:no-underline hover:prose-a:underline
-                           prose-strong:text-gray-800 prose-strong:font-bold
-                           prose-blockquote:border-green-500 prose-blockquote:bg-green-50
-                           prose-blockquote:px-6 prose-blockquote:py-3 prose-blockquote:rounded-r-lg
-                           prose-img:rounded-xl prose-img:shadow-md
-                           prose-li:marker:text-green-600"
-              />
+          {/* Content and TOC in flex row */}
+          <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-start">
+            <article className="flex-1 order-1 lg:order-1">
+              <div className="p-6 md:p-8">
+                <AnimatedProse
+                  html={articleHtml}
+                  className="prose-hijama prose prose-lg max-w-none text-justify
+                             prose-headings:font-serif prose-headings:font-bold prose-headings:scroll-mt-28
+                             prose-a:text-green-700 prose-a:no-underline hover:prose-a:underline
+                             prose-strong:text-gray-800 prose-strong:font-bold
+                             prose-blockquote:border-green-500 prose-blockquote:bg-green-50
+                             prose-blockquote:px-6 prose-blockquote:py-3 prose-blockquote:rounded-r-lg
+                             prose-img:rounded-xl prose-img:shadow-md
+                             prose-li:marker:text-green-600"
+                />
 
-              {faqs.length > 0 && (
-                <FadeIn className="mt-10 pt-8 border-t border-gray-200">
-                  <h2 id={faqHeading?.id} className="font-serif text-2xl font-bold text-green-900 mb-5 scroll-mt-28">
-                    Frequently Asked Questions
-                  </h2>
-                  <FAQAccordion faqs={faqs} />
-                </FadeIn>
-              )}
+                {faqs.length > 0 && (
+                  <FadeIn className="mt-10 pt-8 border-t border-gray-200">
+                    <h2 id={faqHeading?.id} className="font-serif text-2xl font-bold text-green-900 mb-5 scroll-mt-28">
+                      Frequently Asked Questions
+                    </h2>
+                    <FAQAccordion faqs={faqs} />
+                  </FadeIn>
+                )}
 
-              <FadeIn className="mt-10 pt-6 border-t border-gray-200" delay={120}>
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <p className="text-sm text-gray-600 font-medium">Share this article:</p>
-                  <div className="flex gap-3">
-                    <a
-                      href={`https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-gray-100 hover:bg-green-600 hover:text-white p-2.5 rounded-full transition-all duration-200"
-                      aria-label="Share on Twitter"
-                    >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                    </a>
-                    <a
-                      href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-gray-100 hover:bg-green-600 hover:text-white p-2.5 rounded-full transition-all duration-200"
-                      aria-label="Share on Facebook"
-                    >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                    </a>
-                    <a
-                      href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-gray-100 hover:bg-green-600 hover:text-white p-2.5 rounded-full transition-all duration-200"
-                      aria-label="Share on LinkedIn"
-                    >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    </a>
-                    <CopyButton url={shareUrl} />
+                <FadeIn className="mt-10 pt-6 border-t border-gray-200" delay={120}>
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <p className="text-sm text-gray-600 font-medium">Share this article:</p>
+                    <div className="flex gap-3">
+                      <a
+                        href={`https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-gray-100 hover:bg-green-600 hover:text-white p-2.5 rounded-full transition-all duration-200"
+                        aria-label="Share on Twitter"
+                      >
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                      </a>
+                      <a
+                        href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-gray-100 hover:bg-green-600 hover:text-white p-2.5 rounded-full transition-all duration-200"
+                        aria-label="Share on Facebook"
+                      >
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                      </a>
+                      <a
+                        href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-gray-100 hover:bg-green-600 hover:text-white p-2.5 rounded-full transition-all duration-200"
+                        aria-label="Share on LinkedIn"
+                      >
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                      </a>
+                      <CopyButton url={shareUrl} />
+                    </div>
                   </div>
-                </div>
-              </FadeIn>
-            </div>
-          </article>
+                </FadeIn>
+              </div>
+            </article>
 
-          <TableOfContents headings={headings} className="bg-transparent w-full lg:w-72 shrink-0 order-2 lg:order-2 sticky top-28 self-start" />
+        
+           {/* Table of Contents + Sidebar CTA */}
+<div className="w-full lg:w-80 shrink-0 order-2 lg:order-2 sticky top-40 self-start flex flex-col gap-6">
+  <TableOfContents 
+    headings={headings} 
+    className="bg-transparent"
+  />
+
+  <FadeIn delay={200}>
+    <SidebarCTA />
+  </FadeIn>
+</div>
+          </div>
         </div>
       </div>
 

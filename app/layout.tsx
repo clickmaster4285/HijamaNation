@@ -32,6 +32,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <meta 
+          name="google-site-verification" 
+          content="tAfr1R4fQaOPtumLvDZmg5iXrh3MsL1EsESXiSCQDF8" 
+        />
+      </head>
       <body suppressHydrationWarning className="min-h-full flex flex-col">
         <Navbar />
         {children}

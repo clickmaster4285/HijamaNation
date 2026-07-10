@@ -6,11 +6,10 @@ export const blogPosts = [
   {
     id: 1,
     slug: 'what-is-hijama',
-  title: 'Hijama: The Complete Guide to Wet Cupping Therapy',
-  metaTitle: 'What Is Hijama? A Comprehensive Guide 2026',
-  metaDescription: 'Learn what Hijama is, how it works, and its benefits and risks, then explore our Hijama course or book cupping therapy with a certified UK practitioner.',
-    excerpt:
-      'Learn what Hijama is, how it works, its benefits and risks, and explore our Hijama course or book therapy with a certified UK practitioner.',
+    title: 'Hijama: The Complete Guide to Wet Cupping Therapy',
+    metaTitle: 'What Is Hijama? A Comprehensive Guide 2026',
+    metaDescription: 'Learn what Hijama is, how it works, and its benefits and risks, then explore our Hijama course or book cupping therapy with a certified UK practitioner.',
+    excerpt: 'Learn what Hijama is, how it works, its benefits and risks, and explore our Hijama course or book therapy with a certified UK practitioner.',
     content: `
       <p><strong>Hijama</strong> is a form of Prophetic medicine in which a practitioner applies suction cups to the skin and makes small, superficial incisions to draw out stagnant blood. It sits within the wider family of cupping therapies and is practised both as a traditional Sunnah‑based remedy and, increasingly, as a complementary wellness treatment supported by modern clinical hygiene standards.</p>
       <p>This guide explains what Hijama is, how it’s performed, its claimed benefits, its risks, and its place in Islamic tradition – before looking at how you can learn it through a certified course or experience it as a treatment.</p>
@@ -110,6 +109,7 @@ export const blogPosts = [
     `,
     image: '/images/blogimage.png',
     date: '2026-07-06',
+    updatedDate: '2026-07-08',
     author: 'Hijama Nation',
     category: 'Guide',
     tags: ['Hijama', 'Cupping Therapy', 'Wet Cupping', 'Sunnah', 'Pain Relief', 'Detox', 'Islamic Medicine'],
@@ -118,15 +118,13 @@ export const blogPosts = [
   // ============================================================
   // BLOG 2 – placeholder (can add meta later)
   // ============================================================
-   {
+  {
     id: 2,
     slug: 'what-is-hijama-cupping-meaning-explained',
     title: 'What Is Hijama Cupping?',
     metaTitle: 'What Is Hijama Cupping? Meaning Explained 2026',
-    metaDescription:
-      'What is Hijama cupping? Learn what the term means, how it works, and how it fits within wet cupping therapy in this simple 2026 guide.',
-    excerpt:
-      'What is Hijama cupping? Learn what the term means, how it works, and how it fits within wet cupping therapy in this simple 2026 guide.',
+    metaDescription: 'What is Hijama cupping? Learn what the term means, how it works, and how it fits within wet cupping therapy in this simple 2026 guide.',
+    excerpt: 'What is Hijama cupping? Learn what the term means, how it works, and how it fits within wet cupping therapy in this simple 2026 guide.',
     content: `
       <h1>What Is Hijama Cupping?</h1>
       <p><strong>Hijama cupping</strong> refers to the practice of wet cupping  using suction cups on the skin along with small, superficial incisions to draw out a small amount of blood from specific points on the body. The term is often used interchangeably with "Hijama" itself, since Hijama is a particular type of cupping rather than a separate practice altogether. This guide breaks down exactly what the term means, how the process works, and where it fits alongside the other entities you'll come across when researching this topic  procedure, benefits, safety, and religious context. For the full overview, see our complete guide to Hijama.</p>
@@ -250,8 +248,9 @@ export const blogPosts = [
       <h3>Can anyone get Hijama cupping done?</h3>
       <p>Most healthy adults can, following a proper screening consultation. Certain medical conditions and pregnancy are exceptions where treatment should be avoided or discussed with a doctor first.</p>
     `,
-    image: '/images/hijamaBlog.png',   // you can change this image later
-    date: '2026-07-06',                // set today's date
+    image: '/images/hijamaBlog.png',
+    date: '2026-07-06',
+    updatedDate: '2026-07-08',
     author: 'Hijama Nation',
     category: 'Guide',
     tags: ['Hijama Cupping', 'Wet Cupping', 'Cupping Therapy', 'Sunnah', 'Meaning Explained', '2026 Guide'],
@@ -265,10 +264,8 @@ export const blogPosts = [
     slug: 'what-are-hijama-cups-used-for',
     title: 'What Are Hijama Cups Used For?',
     metaTitle: 'What Are Hijama Cups Used For? 2026 Guide',
-    metaDescription:
-      'What are Hijama cups used for? Learn how they work, the types used in wet cupping, and why the right equipment matters for safe treatment.',
-    excerpt:
-      'What are Hijama cups used for? Learn how they work, the types used in wet cupping, and why the right equipment matters for safe treatment.',
+    metaDescription: 'What are Hijama cups used for? Learn how they work, the types used in wet cupping, and why the right equipment matters for safe treatment.',
+    excerpt: 'What are Hijama cups used for? Learn how they work, the types used in wet cupping, and why the right equipment matters for safe treatment.',
     content: `
       <h1>What Are Hijama Cups Used For?</h1>
       <p><strong>Hijama cups</strong> are the primary tool used in wet cupping therapy, designed to create a controlled vacuum on the skin's surface before small incisions are made to draw a small amount of blood. While the cups themselves look simple, the way they're used, sterilised, and sized plays a direct role in how safe and effective a Hijama session is. This guide covers what Hijama cups are used for, the types available, how they differ from dry cupping equipment, and why proper equipment matters as much as practitioner skill. For the broader picture, see our complete guide to Hijama and what Hijama cupping means.</p>
@@ -364,109 +361,110 @@ export const blogPosts = [
       <h3>Are the cups the same for dry cupping and Hijama?</h3>
       <p>The cups can look similar, but Hijama requires stricter, single-use sterilisation standards since incisions are involved, unlike dry cupping which uses suction only.</p>
     `,
-    image: '/images/blog.png',   // you can change this image later
-    date: '2026-07-06',         // set today's date
+    image: '/images/blog.png',
+    date: '2026-07-06',
+    updatedDate: '2026-07-08',
     author: 'Hijama Nation',
     category: 'Equipment',
     tags: ['Hijama Cups', 'Cupping Equipment', 'Wet Cupping', 'Hygiene', 'Sunnah', '2026 Guide'],
   },
+
   // ============================================================
   // BLOG 4 – placeholder
   // ============================================================
   {
-  id: 4,
-  slug: 'how-long-does-a-hijama-session-take',
-  title: 'How Long Does a Hijama Session Take?',
-  metaTitle: 'How Long Does a Hijama Session Take? Full Timing Guide',
-  metaDescription:
-    'How long does a Hijama session take? Learn the typical session length, what affects timing, and what to expect from start to finish.',
-  excerpt:
-    'How long does a Hijama session take? Learn the typical session length, what affects timing, and what to expect from start to finish.',
-  content: `
-    <h1>How Long Does a Hijama Session Take?</h1>
-    <p>A typical Hijama session takes between <strong>30 and 60 minutes</strong> from start to finish, though the exact time depends on how many points are being treated, the client's individual needs, and whether it's a first-time visit that includes a fuller consultation. This guide breaks down what happens during that time, what affects how long a session runs, and what to expect before, during, and after your appointment. For the wider picture on the practice itself, see our complete guide to Hijama and what Hijama cupping means.</p>
+    id: 4,
+    slug: 'how-long-does-a-hijama-session-take',
+    title: 'How Long Does a Hijama Session Take?',
+    metaTitle: 'How Long Does a Hijama Session Take? Full Timing Guide',
+    metaDescription: 'How long does a Hijama session take? Learn the typical session length, what affects timing, and what to expect from start to finish.',
+    excerpt: 'How long does a Hijama session take? Learn the typical session length, what affects timing, and what to expect from start to finish.',
+    content: `
+      <h1>How Long Does a Hijama Session Take?</h1>
+      <p>A typical Hijama session takes between <strong>30 and 60 minutes</strong> from start to finish, though the exact time depends on how many points are being treated, the client's individual needs, and whether it's a first-time visit that includes a fuller consultation. This guide breaks down what happens during that time, what affects how long a session runs, and what to expect before, during, and after your appointment. For the wider picture on the practice itself, see our complete guide to Hijama and what Hijama cupping means.</p>
 
-    <h2>Average Hijama Session Length</h2>
-    <p>Most Hijama sessions fall within a fairly consistent window, though no two appointments are identical.</p>
+      <h2>Average Hijama Session Length</h2>
+      <p>Most Hijama sessions fall within a fairly consistent window, though no two appointments are identical.</p>
 
-    <h3>First-Time Sessions</h3>
-    <p>A first Hijama session usually takes longer than repeat visits  often <strong>45 to 60 minutes</strong>  because it includes a full screening and consultation before any cups are applied. This is where a practitioner checks for contraindications, discusses your reason for treatment, and explains what to expect.</p>
+      <h3>First-Time Sessions</h3>
+      <p>A first Hijama session usually takes longer than repeat visits  often <strong>45 to 60 minutes</strong>  because it includes a full screening and consultation before any cups are applied. This is where a practitioner checks for contraindications, discusses your reason for treatment, and explains what to expect.</p>
 
-    <h3>Repeat Sessions</h3>
-    <p>Once a practitioner already has your medical history on file, follow-up sessions tend to move faster, typically <strong>30 to 45 minutes</strong>, since less time is needed for consultation and more of the appointment is spent on the treatment itself.</p>
+      <h3>Repeat Sessions</h3>
+      <p>Once a practitioner already has your medical history on file, follow-up sessions tend to move faster, typically <strong>30 to 45 minutes</strong>, since less time is needed for consultation and more of the appointment is spent on the treatment itself.</p>
 
-    <h2>What Happens During That Time</h2>
-    <p>Understanding what's actually happening minute-to-minute helps explain why sessions take as long as they do.</p>
+      <h2>What Happens During That Time</h2>
+      <p>Understanding what's actually happening minute-to-minute helps explain why sessions take as long as they do.</p>
 
-    <h3>Consultation and Screening (5–15 Minutes)</h3>
-    <p>Before any cups touch the skin, a practitioner will ask about your medical history, current medications, and the specific reason you're seeking treatment. This step is essential for identifying anyone who should avoid Hijama, such as those who are pregnant, on blood-thinning medication, or managing certain health conditions.</p>
+      <h3>Consultation and Screening (5–15 Minutes)</h3>
+      <p>Before any cups touch the skin, a practitioner will ask about your medical history, current medications, and the specific reason you're seeking treatment. This step is essential for identifying anyone who should avoid Hijama, such as those who are pregnant, on blood-thinning medication, or managing certain health conditions.</p>
 
-    <h3>Cup Placement and Initial Suction (5–10 Minutes)</h3>
-    <p>Sterile cups are applied to the chosen points on the body and left to create suction, drawing the skin upward. This step usually takes a few minutes per set of points and may be repeated across different areas depending on the treatment plan.</p>
+      <h3>Cup Placement and Initial Suction (5–10 Minutes)</h3>
+      <p>Sterile cups are applied to the chosen points on the body and left to create suction, drawing the skin upward. This step usually takes a few minutes per set of points and may be repeated across different areas depending on the treatment plan.</p>
 
-    <h3>Incisions and Blood Drawing (10–20 Minutes)</h3>
-    <p>Once the skin has been drawn up sufficiently, the practitioner makes small, superficial incisions and reapplies the cup to draw a small, controlled amount of blood. This step is done carefully and shouldn't be rushed, which is one of the main reasons total time varies between practitioners and treatment areas.</p>
+      <h3>Incisions and Blood Drawing (10–20 Minutes)</h3>
+      <p>Once the skin has been drawn up sufficiently, the practitioner makes small, superficial incisions and reapplies the cup to draw a small, controlled amount of blood. This step is done carefully and shouldn't be rushed, which is one of the main reasons total time varies between practitioners and treatment areas.</p>
 
-    <h3>Cleaning and Aftercare (5–10 Minutes)</h3>
-    <p>After the cups are removed, the treated area is cleaned, dressed, and the client is given aftercare guidance covering rest, hydration, and wound care for the following days.</p>
+      <h3>Cleaning and Aftercare (5–10 Minutes)</h3>
+      <p>After the cups are removed, the treated area is cleaned, dressed, and the client is given aftercare guidance covering rest, hydration, and wound care for the following days.</p>
 
-    <h2>What Affects How Long a Session Takes</h2>
-    <p>Several factors influence total appointment time, and it's worth knowing these before you book so you can plan your day around it.</p>
+      <h2>What Affects How Long a Session Takes</h2>
+      <p>Several factors influence total appointment time, and it's worth knowing these before you book so you can plan your day around it.</p>
 
-    <h3>Number of Points Treated</h3>
-    <p>More treatment points naturally mean more time. A session focused on one or two areas will run shorter than one covering multiple points across the back, shoulders, or head.</p>
+      <h3>Number of Points Treated</h3>
+      <p>More treatment points naturally mean more time. A session focused on one or two areas will run shorter than one covering multiple points across the back, shoulders, or head.</p>
 
-    <h3>Reason for Treatment</h3>
-    <p>Sessions aimed at general wellbeing or a single area of discomfort tend to be quicker than those addressing more widespread pain or multiple concerns at once.</p>
+      <h3>Reason for Treatment</h3>
+      <p>Sessions aimed at general wellbeing or a single area of discomfort tend to be quicker than those addressing more widespread pain or multiple concerns at once.</p>
 
-    <h3>First Visit vs Ongoing Client</h3>
-    <p>First-time clients should expect a longer appointment due to the consultation step. Regular clients with an established treatment plan typically move through sessions more efficiently.</p>
+      <h3>First Visit vs Ongoing Client</h3>
+      <p>First-time clients should expect a longer appointment due to the consultation step. Regular clients with an established treatment plan typically move through sessions more efficiently.</p>
 
-    <h3>Practitioner's Pace and Care</h3>
-    <p>A careful, unhurried practitioner may take slightly longer per point, which is generally a good sign  Hijama shouldn't feel rushed, especially during the incision and blood-drawing stage.</p>
+      <h3>Practitioner's Pace and Care</h3>
+      <p>A careful, unhurried practitioner may take slightly longer per point, which is generally a good sign  Hijama shouldn't feel rushed, especially during the incision and blood-drawing stage.</p>
 
-    <h2>Should You Plan Extra Time Around Your Appointment?</h2>
-    <p>Beyond the treatment itself, it's worth allowing a little buffer either side of your session.</p>
+      <h2>Should You Plan Extra Time Around Your Appointment?</h2>
+      <p>Beyond the treatment itself, it's worth allowing a little buffer either side of your session.</p>
 
-    <h3>Before Your Session</h3>
-    <p>Arriving a few minutes early gives you time to settle in and ask any questions before the consultation begins, particularly if it's your first visit.</p>
+      <h3>Before Your Session</h3>
+      <p>Arriving a few minutes early gives you time to settle in and ask any questions before the consultation begins, particularly if it's your first visit.</p>
 
-    <h3>After Your Session</h3>
-    <p>Some clients feel mild fatigue or tiredness after treatment, which is a normal and commonly reported reaction. It's worth allowing time to rest afterwards rather than heading straight into a physically demanding activity.</p>
+      <h3>After Your Session</h3>
+      <p>Some clients feel mild fatigue or tiredness after treatment, which is a normal and commonly reported reaction. It's worth allowing time to rest afterwards rather than heading straight into a physically demanding activity.</p>
 
-    <h2>Does a Longer Session Mean a Better Treatment?</h2>
-    <p>Not necessarily. Session length reflects the number of points treated and the care taken during the process  not the effectiveness of the treatment itself. A shorter, focused session addressing one or two areas can be just as appropriate as a longer one, depending on your individual needs. What matters more than time on the table is that screening, hygiene, and aftercare are all properly followed.</p>
+      <h2>Does a Longer Session Mean a Better Treatment?</h2>
+      <p>Not necessarily. Session length reflects the number of points treated and the care taken during the process  not the effectiveness of the treatment itself. A shorter, focused session addressing one or two areas can be just as appropriate as a longer one, depending on your individual needs. What matters more than time on the table is that screening, hygiene, and aftercare are all properly followed.</p>
 
-    <h2>Getting Started</h2>
-    <p>If you're booking your first Hijama session, it's worth setting aside a full hour to allow time for a proper consultation, even if the treatment itself ends up being quicker. If you're considering training as a practitioner, understanding realistic session timing  and why rushing certain steps isn't appropriate  is part of what a proper Hijama course should teach.</p>
-    <p>Hijama Nation allows adequate time for screening, treatment, and aftercare in every session, and covers session pacing and client care as part of our certified Hijama course.</p>
+      <h2>Getting Started</h2>
+      <p>If you're booking your first Hijama session, it's worth setting aside a full hour to allow time for a proper consultation, even if the treatment itself ends up being quicker. If you're considering training as a practitioner, understanding realistic session timing  and why rushing certain steps isn't appropriate  is part of what a proper Hijama course should teach.</p>
+      <p>Hijama Nation allows adequate time for screening, treatment, and aftercare in every session, and covers session pacing and client care as part of our certified Hijama course.</p>
 
-    <h2>Frequently Asked Questions</h2>
-    <h3>How long does a first Hijama session take?</h3>
-    <p>First sessions typically take 45 to 60 minutes, since they include a full consultation and screening before treatment begins.</p>
+      <h2>Frequently Asked Questions</h2>
+      <h3>How long does a first Hijama session take?</h3>
+      <p>First sessions typically take 45 to 60 minutes, since they include a full consultation and screening before treatment begins.</p>
 
-    <h3>How long do repeat Hijama sessions take?</h3>
-    <p>Follow-up sessions are usually shorter, around 30 to 45 minutes, since the consultation stage is quicker once your medical history is already on file.</p>
+      <h3>How long do repeat Hijama sessions take?</h3>
+      <p>Follow-up sessions are usually shorter, around 30 to 45 minutes, since the consultation stage is quicker once your medical history is already on file.</p>
 
-    <h3>Why do some Hijama sessions take longer than others?</h3>
-    <p>Session length depends on the number of points treated, the reason for treatment, and whether it's a first-time or repeat visit.</p>
+      <h3>Why do some Hijama sessions take longer than others?</h3>
+      <p>Session length depends on the number of points treated, the reason for treatment, and whether it's a first-time or repeat visit.</p>
 
-    <h3>Is a longer Hijama session more effective?</h3>
-    <p>Not necessarily. Length reflects how many areas are being treated and the care taken during the process, not how effective the treatment is.</p>
+      <h3>Is a longer Hijama session more effective?</h3>
+      <p>Not necessarily. Length reflects how many areas are being treated and the care taken during the process, not how effective the treatment is.</p>
 
-    <h3>How much time should I set aside for a Hijama appointment?</h3>
-    <p>It's best to allow a full hour, especially for a first visit, to account for consultation, treatment, and a few minutes of rest afterwards.</p>
+      <h3>How much time should I set aside for a Hijama appointment?</h3>
+      <p>It's best to allow a full hour, especially for a first visit, to account for consultation, treatment, and a few minutes of rest afterwards.</p>
 
-    <h3>Should I plan rest time after a Hijama session?</h3>
-    <p>Yes. Mild fatigue is a common reaction after treatment, so it's a good idea to avoid strenuous activity immediately afterwards.</p>
+      <h3>Should I plan rest time after a Hijama session?</h3>
+      <p>Yes. Mild fatigue is a common reaction after treatment, so it's a good idea to avoid strenuous activity immediately afterwards.</p>
 
-    <h3>Does session length vary by practitioner?</h3>
-    <p>Yes. A careful, unhurried practitioner may take slightly longer, particularly during the incision and blood-drawing steps, which is generally a positive sign rather than a concern.</p>
-  `,
-  image: '/images/bloghijama.png',   // you can change to a more relevant image later
-  date: '2026-07-06',
-  author: 'Hijama Nation',
-  category: 'Timing',
-  tags: ['Hijama Session', 'Session Length', 'Appointment Timing', 'Wet Cupping', 'Treatment Duration'],
-},
+      <h3>Does session length vary by practitioner?</h3>
+      <p>Yes. A careful, unhurried practitioner may take slightly longer, particularly during the incision and blood-drawing steps, which is generally a positive sign rather than a concern.</p>
+    `,
+    image: '/images/bloghijama.png',
+    date: '2026-07-06',
+    updatedDate: '2026-07-08',
+    author: 'Hijama Nation',
+    category: 'Timing',
+    tags: ['Hijama Session', 'Session Length', 'Appointment Timing', 'Wet Cupping', 'Treatment Duration'],
+  },
 ];
