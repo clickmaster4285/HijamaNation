@@ -107,7 +107,7 @@ export default function Safety() {
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.15 }}
                 variants={container}
-                className="relative w-full"   // full width, no max-width, no centering
+                className="relative w-full"
             >
                 <motion.div variants={fadeUp} className="flex items-center gap-3 mb-4">
                     <motion.div
@@ -127,15 +127,8 @@ export default function Safety() {
                     className="text-3xl md:text-4xl lg:text-5xl font-serif text-gray-900 leading-tight mb-6"
                 >
                     Safety Is Very Important in{" "}
-                    <span className="text-green-700 italic relative">
+                    <span className="text-green-700 italic">
                         Hijama Cupping Therapy
-                        <motion.span
-                            initial={{ width: 0 }}
-                            whileInView={{ width: "100%" }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-                            className="absolute bottom-0 left-0 h-1 bg-green-300/50 rounded-full"
-                        />
                     </span>
                 </motion.h2>
 

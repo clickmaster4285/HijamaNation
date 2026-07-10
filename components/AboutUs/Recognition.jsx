@@ -1,11 +1,8 @@
 "use client";
-
 import { useEffect, useRef, useState } from "react";
-
 function useInView(threshold = 0.2) {
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
-
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
@@ -49,7 +46,6 @@ function AnimatedStat({ value, inView, duration = 1200 }) {
 }
 
 const credentials = ["GRCCT", "PMA", "IICT"];
-
 const stats = [
   { value: "2", label: "Insurance Companies" },
   { value: "5", label: "Countries Recognised" },

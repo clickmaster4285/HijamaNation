@@ -3,9 +3,6 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -36,4 +33,257 @@ body {
 .animate-ticker {
   animation: ticker 25s linear infinite;
   width: max-content;
+}
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ============================================
+   PROSE CUSTOMISATIONS (for blog content)
+   ============================================ */
+.prose h2 {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1rem !important;
+  border-left: 6px solid #059669;
+  padding-left: 1.25rem;
+  animation: fadeInUp 0.6s ease forwards;
+  color: #1e293b !important;
+}
+
+.prose h3 {
+  font-size: 1.35rem !important;
+  font-weight: 600 !important;
+  margin-top: 1.75rem !important;
+  margin-bottom: 0.75rem !important;
+  color: #047857 !important;
+  animation: fadeInUp 0.6s ease 0.1s forwards;
+  opacity: 0;
+}
+
+/* Table – modern card style */
+.prose table {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.15) !important;
+  animation: fadeInUp 0.7s ease 0.15s forwards;
+  opacity: 0;
+  margin: 2rem 0 !important;
+}
+
+.prose thead {
+  background: #064e3b !important;
+}
+
+.prose th {
+  color: white !important;
+  font-weight: 600 !important;
+  padding: 0.9rem 1.2rem !important;
+  text-align: left !important;
+  border: none !important;
+}
+
+.prose td {
+  padding: 0.9rem 1.2rem !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  border-left: none !important;
+  border-right: none !important;
+  background-color: white !important;
+}
+
+.prose tr:last-child td {
+  border-bottom: none !important;
+}
+
+.prose tr:nth-child(even) td {
+  background-color: #f8fafc !important;
+}
+
+.prose tr:hover td {
+  background-color: #ecfdf5 !important;
+  transition: background 0.2s ease;
+}
+
+.prose tbody tr:first-child td:first-child {
+  border-top-left-radius: 0 !important;
+}
+.prose tbody tr:first-child td:last-child {
+  border-top-right-radius: 0 !important;
+}
+.prose tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 16px !important;
+}
+.prose tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 16px !important;
+}
+
+/* ============================================
+   CTA CARDS (inside the blog)
+   ============================================ */
+.cta-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 2.5rem 0 !important;
+}
+
+@media (min-width: 768px) {
+  .cta-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.cta-card {
+  background: white;
+  padding: 1.75rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: fadeInUp 0.7s ease 0.25s forwards;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cta-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 40px -12px rgba(5, 150, 105, 0.25);
+  border-color: #059669;
+}
+
+.cta-card h3 {
+  font-size: 1.3rem !important;
+  font-weight: 700 !important;
+  color: #064e3b !important;
+  margin-top: 0 !important;
+  margin-bottom: 0.75rem !important;
+  border: none !important;
+  padding-left: 0 !important;
+  animation: none !important;
+  opacity: 1 !important;
+}
+
+.cta-card ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: 0.5rem 0 1.25rem 0 !important;
+  flex: 1;
+}
+
+.cta-card ul li {
+  padding-left: 1.5rem !important;
+  position: relative !important;
+  margin-bottom: 0.4rem !important;
+  font-size: 0.95rem !important;
+  color: #334155 !important;
+}
+
+.cta-card ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #059669;
+  font-weight: 700;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #059669;
+  color: white !important;
+  padding: 0.6rem 1.8rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+  text-decoration: none !important;
+  align-self: flex-start;
+  margin-top: auto;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px -4px rgba(5, 150, 105, 0.3);
+}
+
+.cta-button:hover {
+  background: #047857;
+  transform: scale(1.03);
+  box-shadow: 0 8px 18px -6px rgba(5, 150, 105, 0.4);
+  text-decoration: none !important;
+  color: white !important;
+}
+
+/* Paragraph & list animations (subtle) */
+.prose p,
+.prose ul:not(.cta-card ul),
+.prose ol {
+  animation: fadeInUp 0.6s ease 0.1s forwards;
+  opacity: 0;
+}
+
+.prose blockquote {
+  animation: slideInLeft 0.6s ease 0.2s forwards;
+  opacity: 0;
+  border-left: 4px solid #059669 !important;
+  background: #f0fdf4 !important;
+  padding: 1rem 1.5rem !important;
+  border-radius: 0 12px 12px 0 !important;
+}
+/* Blog post content refinements */
+.prose h2 {
+  font-family: 'Inter', system-ui, sans-serif; /* or your preferred font */
+  letter-spacing: -0.02em;
+}
+
+.prose p {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.8;
+  color: #1e293b;
+}
+
+.prose li {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.prose table {
+  font-size: 0.95rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.prose blockquote p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.prose img {
+  margin: 2.5rem 0;
 }

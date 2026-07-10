@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { navItems } from "../../data/navItems";
 
 const TOPBAR_WHATSAPP = "447547424623";
@@ -10,10 +11,15 @@ const waMessage = encodeURIComponent("Hi, I'd like to know more about Hijama Nat
 
 export default function Navbar() {
   const [isScrolledPastHero, setIsScrolledPastHero] = useState(false);
+  const pathname = usePathname();
+  const isBlogPage = pathname?.startsWith("/blog");
 
   const isExternal = (href) => href && href.startsWith("http");
 
   useEffect(() => {
+    // On blog pages the navbar is always solid, so there's nothing to track.
+    if (isBlogPage) return;
+
     const updateScrollState = () => {
       const hero = document.querySelector(".page-hero");
       const scrollY = window.scrollY;
@@ -38,7 +44,14 @@ export default function Navbar() {
       window.removeEventListener("scroll", updateScrollState);
       window.removeEventListener("resize", updateScrollState);
     };
-  }, []);
+  }, [isBlogPage]);
+
+  // Blog pages: always solid black. Other pages: transparent over the hero, black once scrolled past it.
+  const navBgClass = isBlogPage
+    ? "bg-black/80"
+    : isScrolledPastHero
+    ? "bg-black/80"
+    : "bg-transparent";
 
   return (
     <>
@@ -125,9 +138,7 @@ export default function Navbar() {
 
       {/* ── MAIN NAVBAR (below topbar) ────────────────────────────────── */}
       <nav
-        className={`fixed left-0 top-[44px] w-full z-40 py-4 flex items-center justify-between px-8 md:px-16 lg:px-20 backdrop-blur-sm transition-colors duration-300 ${
-          isScrolledPastHero ? "bg-black/80" : "bg-transparent"
-        }`}
+        className={`fixed left-0 top-[44px] w-full z-40 py-4 flex items-center justify-between px-8 md:px-16 lg:px-20 backdrop-blur-sm transition-colors duration-300 ${navBgClass}`}
       >
         {/* Logo – links to homepage */}
         <Link href="/" className="flex items-center gap-3">

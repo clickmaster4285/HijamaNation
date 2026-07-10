@@ -7,14 +7,29 @@ const benefits = [
 
 export default function FinalCTA({ inView }) {
   return (
-    <section className="hn-section cta-section bg-[#0a0f1a] relative overflow-hidden">
+    <section className="hn-section cta-section bg-[#0a0f1a] relative overflow-hidden w-full">
       <style>{`
         .cta-section {
-          padding: 100px 24px;
+          padding: 100px 24px;      /* default: 24px horizontal */
+          width: 100%;
+        }
+
+        @media (min-width: 768px) {
+          .cta-section {
+            padding: 100px 48px;    /* tablet: 48px horizontal */
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .cta-section {
+            padding: 100px 80px;    /* desktop: 80px horizontal */
+          }
         }
 
         @media (max-width: 768px) {
-          .cta-section { padding: 70px 20px; }
+          .cta-section {
+            padding: 70px 24px;     /* mobile vertical reduced, horizontal stays 24px */
+          }
         }
 
         /* ── Background layers ───────────────────────────────────────────── */
@@ -45,37 +60,29 @@ export default function FinalCTA({ inView }) {
           50% { opacity: 1; transform: translateX(-50%) scale(1.08); }
         }
 
-        /* ── Card ────────────────────────────────────────────────────────── */
-        .cta-card {
+        /* ── Content wrapper ──────────────────────────────────────────── */
+        .cta-inner {
           position: relative;
           z-index: 1;
-          max-width: 880px;
-          margin: 0 auto;
-          background: linear-gradient(160deg, rgba(255,255,255,0.045) 0%, rgba(255,255,255,0.015) 100%);
-          border: 1px solid rgba(255,255,255,0.08);
-          border-radius: 28px;
-          padding: 56px 48px;
-          text-align: center;
-          box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+          width: 100%;
           opacity: 0;
-          transform: translateY(30px) scale(0.98);
+          transform: translateY(30px);
           transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
         }
 
-        .cta-card.show {
+        .cta-inner.show {
           opacity: 1;
-          transform: translateY(0) scale(1);
+          transform: translateY(0);
         }
 
-        @media (max-width: 640px) {
-          .cta-card { padding: 40px 24px; border-radius: 22px; }
-        }
-
+        /* ── Tag (centered) ─────────────────────────────────────────────── */
         .cta-tag {
           display: inline-flex;
           align-items: center;
           gap: 10px;
           margin-bottom: 20px;
+          justify-content: center;
+          width: 100%;
         }
 
         .cta-tag-line {
@@ -96,12 +103,14 @@ export default function FinalCTA({ inView }) {
           text-transform: uppercase;
         }
 
+        /* ── Heading & lead (LEFT‑ALIGNED) ─────────────────────────────── */
         .cta-heading {
           font-family: Georgia, serif;
           color: #fff;
           font-size: clamp(30px, 5vw, 52px);
           line-height: 1.15;
           margin: 0 0 20px;
+          text-align: left;
         }
 
         .cta-heading .accent {
@@ -112,8 +121,9 @@ export default function FinalCTA({ inView }) {
           color: rgba(255,255,255,0.72);
           font-size: 16px;
           line-height: 1.7;
-          max-width: 560px;
-          margin: 0 auto 32px;
+          margin: 0 0 32px;
+          width: 100%;
+          text-align: left;
         }
 
         /* ── Checklist ───────────────────────────────────────────────────── */
@@ -121,9 +131,9 @@ export default function FinalCTA({ inView }) {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           gap: 12px 20px;
-          max-width: 560px;
-          margin: 0 auto 14px;
+          margin: 0 0 14px;
           text-align: left;
+          width: 100%;
         }
 
         @media (max-width: 560px) {
@@ -178,20 +188,23 @@ export default function FinalCTA({ inView }) {
           line-height: 1.5;
         }
 
+        /* ── Highlight ──────────────────────────────────────────────────── */
         .cta-highlight {
           color: #4ade80;
           font-weight: 600;
           font-size: 15px;
           margin: 22px 0 34px;
+          text-align: left;
         }
 
-        /* ── Buttons ─────────────────────────────────────────────────────── */
+        /* ── Buttons ────────────────────────────────────────────────────── */
         .cta-buttons {
           display: flex;
           flex-wrap: wrap;
-          justify-content: center;
+          justify-content: flex-start;
           gap: 16px;
           margin-bottom: 28px;
+          width: 100%;
         }
 
         .cta-btn-primary {
@@ -207,7 +220,7 @@ export default function FinalCTA({ inView }) {
           text-decoration: none;
           box-shadow: 0 12px 30px rgba(34,197,94,0.32);
           transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
-          cursor: default;       /* non‑clickable cursor */
+          cursor: default;
         }
 
         .cta-btn-primary:hover {
@@ -237,7 +250,7 @@ export default function FinalCTA({ inView }) {
           border-radius: 999px;
           text-decoration: none;
           transition: all 0.3s ease;
-          cursor: default;       /* non‑clickable cursor */
+          cursor: default;
         }
 
         .cta-btn-secondary:hover {
@@ -246,7 +259,7 @@ export default function FinalCTA({ inView }) {
           background: rgba(34,197,94,0.08);
         }
 
-        /* ── Trust row ───────────────────────────────────────────────────── */
+        /* ── Trust row ────────────────────────────────────────────────────── */
         .cta-trust {
           display: flex;
           flex-wrap: wrap;
@@ -254,6 +267,7 @@ export default function FinalCTA({ inView }) {
           gap: 24px;
           padding-top: 24px;
           border-top: 1px solid rgba(255,255,255,0.08);
+          width: 100%;
         }
 
         .cta-trust-item {
@@ -271,7 +285,7 @@ export default function FinalCTA({ inView }) {
         }
 
         @media (prefers-reduced-motion: reduce) {
-          .cta-card, .cta-check-item, .cta-glow {
+          .cta-inner, .cta-check-item, .cta-glow {
             transition: none !important;
             animation: none !important;
             opacity: 1 !important;
@@ -283,7 +297,7 @@ export default function FinalCTA({ inView }) {
       <div className="cta-grid-pattern" />
       <div className="cta-glow" />
 
-      <div className={`cta-card ${inView ? "show" : ""}`}>
+      <div className={`cta-inner ${inView ? "show" : ""}`}>
         <div className="cta-tag">
           <span className="cta-tag-line" />
           <span className="cta-tag-label">Start Today</span>
