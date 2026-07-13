@@ -287,3 +287,54 @@ body {
 .prose img {
   margin: 2.5rem 0;
 }
+/* Add to your global CSS or in the blog page component */
+
+/* Fade-in animation for images */
+.blog-image {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.blog-image:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.blog-image:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.blog-image:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.blog-image:nth-child(5) {
+  animation-delay: 1.0s;
+}
+
+.blog-image:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover animation for images */
+.blog-image {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.blog-image:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}

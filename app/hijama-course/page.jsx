@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Link from "next/link"; // ← Add this import
+import Link from "next/link";
 
 import Hero from "../../components/HijamaCourse/Hero";
 import WhatIsCourse from "../../components/HijamaCourse/WhatIsCourse";
@@ -81,8 +81,159 @@ export default function HijamaCourse() {
 
     useEffect(() => window.scrollTo(0, 0), []);
 
+    // Schema data for Hijama Course page
+    const courseSchema = {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "@id": "https://hijamanation.com/hijama-course/#course",
+        "name": "Hijama Course",
+        "description": "Hijama Nation provides a structured Hijama course for students who want to learn Hijama with guidance on theory, safety, hygiene, client screening, contraindications, aftercare, Sunnah awareness, and practitioner-focused learning.",
+        "url": "https://hijamanation.com/hijama-course/",
+        "provider": {
+            "@type": "Organization",
+            "@id": "https://hijamanation.com/#organization",
+            "name": "Hijama Nation",
+            "url": "https://hijamanation.com/"
+        },
+        "courseMode": "Online",
+        "educationalCredentialAwarded": "Hijama course certificate",
+        "teaches": [
+            "Hijama theory",
+            "Hijama safety",
+            "Hygiene practice",
+            "Client screening",
+            "Contraindications",
+            "Aftercare guidance",
+            "Sunnah awareness",
+            "Practitioner development"
+        ],
+        "audience": {
+            "@type": "EducationalAudience",
+            "audienceType": "Students interested in learning Hijama"
+        }
+    };
+
+    const serviceSchema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://hijamanation.com/hijama-course/#service",
+        "name": "Hijama Course",
+        "serviceType": "Hijama training course",
+        "url": "https://hijamanation.com/hijama-course/",
+        "description": "Hijama Nation provides a Hijama course for students who want to learn Hijama through structured course guidance, safety awareness, hygiene training, screening knowledge, aftercare understanding, and practitioner-focused learning.",
+        "provider": {
+            "@type": "Organization",
+            "@id": "https://hijamanation.com/#organization",
+            "name": "Hijama Nation",
+            "url": "https://hijamanation.com/"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Kingdom"
+        },
+        "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://hijamanation.com/hijama-course/"
+        }
+    };
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": "https://hijamanation.com/hijama-course/#breadcrumb",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://hijamanation.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Hijama Course",
+                "item": "https://hijamanation.com/hijama-course/"
+            }
+        ]
+    };
+
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://hijamanation.com/hijama-course/#faq",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the Hijama course?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Hijama course is designed for students who want to learn Hijama through structured guidance covering theory, safety, hygiene, client screening, contraindications, aftercare, Sunnah awareness, and practitioner-focused learning."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can beginners join the Hijama course?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, beginners may apply if they want to learn Hijama responsibly and follow guidance on safety, hygiene, client screening, contraindications, aftercare, and practitioner-focused learning."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the Hijama course online?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Hijama Nation provides online Hijama course support. Students should check the course page or contact the team for the latest course format, access, and support details."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the Hijama course include certification?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The Hijama course includes certification support after students complete the required learning and assessment pathway. Exact certification details should be confirmed with Hijama Nation before enrolment."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What will I learn in the Hijama course?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Students can learn Hijama theory, safety, hygiene, client screening, contraindications, aftercare guidance, Sunnah awareness, and practitioner-focused learning."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I apply for the Hijama course?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You can apply through the Hijama Course page or contact Hijama Nation for course guidance, enrolment information, fees, and access details."
+                }
+            }
+        ]
+    };
+
     return (
         <>
+            {/* Schema Scripts */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+
+            {/* Page Content */}
             <div ref={heroRef}>
                 <Hero stats={stats} inView={heroInView} />
             </div>
@@ -95,7 +246,7 @@ export default function HijamaCourse() {
                 <CourseAtGlance features={features} inView={glanceInView} />
             </div>
 
-            {/* ─── NEW: Link to the full curriculum page ─── */}
+            {/* ─── Link to the full curriculum page ─── */}
             <div className="py-8 px-6 md:px-12 lg:px-20 bg-white text-center border-b border-gray-100">
                 <Link
                     href="/hijama-course/course-curriculum"

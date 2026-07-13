@@ -1,3 +1,4 @@
+'use client';
 const benefits = [
   "Learn a meaningful Sunnah-based skill",
   "Build confidence",

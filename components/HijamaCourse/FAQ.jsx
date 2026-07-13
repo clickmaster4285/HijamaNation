@@ -1,3 +1,4 @@
+'use client ';
 // src/components/HijamaCourse/FAQ.jsx
 import { useState } from "react";
 
