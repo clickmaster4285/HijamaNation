@@ -468,143 +468,163 @@ export const blogPosts = [
     tags: ['Hijama Session', 'Session Length', 'Appointment Timing', 'Wet Cupping', 'Treatment Duration'],
   },
 
-  // ============================================================
-  // BLOG 5 – NEW: Hijama Therapy for Multiple Health Issues
-  // ============================================================
-  {
-    id: 5,
-    slug: 'hijama-therapy-for-multiple-health-issues',
-    title: 'Hijama Therapy for Multiple Health Issues: A Case Study',
-    metaTitle: 'Hijama Therapy for Multiple Health Issues - Case Study 2026',
-    metaDescription: 'Discover how Hijama cupping therapy helped a 74-year-old patient with diabetes, high blood pressure, neuropathy, and congestive heart failure. A detailed case study showing remarkable results.',
-    excerpt: 'Discover how Hijama cupping therapy helped a 74-year-old patient with diabetes, high blood pressure, neuropathy, and congestive heart failure. A detailed case study showing remarkable results.',
-    content: `
-      <p><strong>Assalaamoalaykum,</strong></p>
-      <p>We live in the era of advanced technology yet people everyday find themselves sick whether it is common health conditions such as Diabetes, high blood pressure, heart disease, skin conditions and the elephant in the room, cancer. Also unknown diseases spring up time and again.</p>
-      <p>At Hijama Nation we stress the importance of cleansing and detoxing the body naturally in order to be able to relieve health issues and one of the most valuable natural methods is Hijama Cupping Therapy.</p>
-      <p>It was the most recommended medical remedy by the Messenger (Sallallaahu Alayhi Wasallam) who said, <em>"Indeed the best of remedies that you have is cupping …"</em> (Bukhari).</p>
-      <p>Through ours and our students Hijama Success stories we have seen Hijama deal with common conditions and those that fall under the category of non-treatable diseases. As well as it's ability to help overcome the side-effects of a modern Allopathic medicine.</p>
+// ============================================================
+// BLOG 5 – Hijama Therapy for Multiple Health Issues (UPDATED WITH CTA)
+// ============================================================
+{
+  id: 5,
+  slug: 'hijama-therapy-for-multiple-health-issues',
+  title: 'Hijama Therapy for Multiple Health Issues: A Case Study',
+  metaTitle: 'Hijama Therapy for Multiple Health Issues - Case Study 2026',
+  metaDescription: 'Discover how Hijama cupping therapy helped a 74-year-old patient with diabetes, high blood pressure, neuropathy, and congestive heart failure. A detailed case study showing remarkable results.',
+  excerpt: 'Discover how Hijama cupping therapy helped a 74-year-old patient with diabetes, high blood pressure, neuropathy, and congestive heart failure. A detailed case study showing remarkable results.',
+  content: `
+    <p><strong>Assalaamoalaykum,</strong></p>
+    <p>We live in the era of advanced technology yet people everyday find themselves sick whether it is common health conditions such as Diabetes, high blood pressure, heart disease, skin conditions and the elephant in the room, cancer. Also unknown diseases spring up time and again.</p>
+    <p>At Hijama Nation we stress the importance of cleansing and detoxing the body naturally in order to be able to relieve health issues and one of the most valuable natural methods is Hijama Cupping Therapy.</p>
+    <p>It was the most recommended medical remedy by the Messenger (Sallallaahu Alayhi Wasallam) who said, <em>"Indeed the best of remedies that you have is cupping …"</em> (Bukhari).</p>
+    <p>Through ours and our students Hijama Success stories we have seen Hijama deal with common conditions and those that fall under the category of non-treatable diseases. As well as it's ability to help overcome the side-effects of a modern Allopathic medicine.</p>
 
-      <h2>Introduction to the Case Study</h2>
-      <p>Today, I am going to share with you a case study by one of our hardworking Hijama Diploma Students, Sister Nilfera Redzic from Missouri, USA.</p>
-      <p>Her client was a <strong>74 Years old Female</strong> who weighed <strong>270 pounds</strong>. She was suffering from multiple health issues like:</p>
-      <ul>
-        <li>Diabetes</li>
-        <li>High Blood Pressure</li>
-        <li>Severe water retention</li>
-        <li>Severe bloating</li>
-        <li>Poor sleep quality</li>
+    <h2>Introduction to the Case Study</h2>
+    <p>Today, I am going to share with you a case study by one of our hardworking Hijama Diploma Students, Sister Nilfera Redzic from Missouri, USA.</p>
+    <p>Her client was a <strong>74 Years old Female</strong> who weighed <strong>270 pounds</strong>. She was suffering from multiple health issues like:</p>
+    <ul>
+      <li>Diabetes</li>
+      <li>High Blood Pressure</li>
+      <li>Severe water retention</li>
+      <li>Severe bloating</li>
+      <li>Poor sleep quality</li>
+    </ul>
+    <p>She was sick for several years and the major areas of concern were <strong>Neuropathy</strong>, and <strong>Congestive Heart Failure</strong>.</p>
+    <p>She also had a left knee replacement surgery which was not successful though, as a result, she has to use a power wheelchair as became 80-90% immobile due to her weak muscles and knees problems.</p>
+    <p>She was taking various medications. She was generally a strong willed person, but her illness had lowered her motivation in trying to get better.</p>
+    <p>She experienced Hijama Cupping Therapy before by a Non-Hijama Nation Practitioner but unfortunately did not experience much difference at the time. But recently, she decided to go for Hijama Cupping Therapy again with one of our Students Nilfera Redzic.</p>
+    <p>From this case study you will see how the human body is interconnected and how powerful natural methods can be to strengthen and revitalise the body again when there seems little hope for change.</p>
+
+    <h2>Treatment Plan and Sessions</h2>
+
+    <h3>First Session</h3>
+    <p>During the first session, moving cupping and fixed cupping was first applied on her entire back and top of the shoulders. As mentioned that with her previous Hijama therapy, she was unable to see the desired benefits, so this time, a detailed plan of sessions was conducted.</p>
+    <p>After the session, she was advised to alter her eating habits by adopting a healthier diet, like having more raw fruits and vegetables, and exercise more often. She was encouraged to continue having strong faith in Allah (SWT) and keep up Salah and daily supplications from the Quran and Sunnah and to give in Charity.</p>
+
+    <h4>Results of the First Session</h4>
+    <ul>
+      <li>She felt tired for 2 days after the session.</li>
+      <li>She slept a lot more whereas she couldn't do otherwise.</li>
+    </ul>
+
+    <h3>Second Session</h3>
+    <p>During the second session, they focused on the legs and feet so moving and fixed cupping were applied on her legs and feet to support the swelling. This was to enhance circulation again.</p>
+
+    <h4>Results of the Second Session</h4>
+    <ul>
+      <li>The same day after Hijama therapy, she started going to the bathroom very often to urinate. The same frequency of urination continued for at least a few days. This was great because urination is a form of cleansing and detoxing the body from impurities.</li>
+      <li>This was a good sign that Hijama actually worked on her this time since the diuretic medication she was taking was no longer affecting her.</li>
+      <li>Before her feet and legs were very big in size due to the swelling but you could see they began returning to their normal size.</li>
+      <li>Alhamdulillah, she felt happier and felt good.</li>
+    </ul>
+
+    <h3>Third Session</h3>
+    <p>During the third session, the process of Hijama for her head started. Firstly the cupping was fixed on neck area. Moving cupping and Hijama were also performed on the arms, especially on her shoulders, as she mentioned the feeling of pain on her shoulders.</p>
+
+    <h4>Results of the Third Session</h4>
+    <ul>
+      <li>She felt a little light headed after the session which settled fast and soon after she was feeling good again.</li>
+    </ul>
+
+    <h3>Fourth Session</h3>
+    <p>During the fourth session she experienced moving cupping which is like massage with the Hijama cups and reflexology.</p>
+
+    <h4>Results of the Fourth Session</h4>
+    <ul>
+      <li>She felt tired after that session too that just means her body is working hard in getting better and adjusting with the new changes happening but she did notice a lot of improvements from these sessions.</li>
+    </ul>
+
+    <h3>Fifth Session</h3>
+    <p>During the fifth session, fixed and moving cupping was applied on her back, reflexology on her feet and palms was conducted, and a facial massage was given.</p>
+
+    <h4>Results of the Fifth Session</h4>
+    <ul>
+      <li>Her condition was improving continuously.</li>
+      <li>MashaAllah, she felt positive changes in her body.</li>
+    </ul>
+
+    <h3>Sixth Session</h3>
+    <p>During the last session, Hijama therapy was applied on and around her major organs such as the kidneys to help her get rid of the massive movements of fluids and debris from the body that were causing her unease.</p>
+
+    <h2>Overall Results</h2>
+    <p>She was fortunate she decided to give Hijama another try. She suffered a lot and by grace of Allah she has seen drastic changes in such a short period of treatment and insha Allah there will be more positive changes to come if she continues.</p>
+    <ul>
+      <li><strong>Her swelling went down to 50-60%</strong></li>
+      <li><strong>She almost lost around 20 pounds</strong></li>
+      <li><strong>Her mobility and digestion also improved</strong></li>
+      <li><strong>Mentally, emotionally, and spiritually, she is doing much better</strong></li>
+      <li><strong>She is able to maintain her prayers</strong></li>
+      <li><strong>Her neuropathy is under control</strong></li>
+    </ul>
+    <p>The client had complete faith that she was healed due to Hijama therapy. She believes that Allah (SWT) is the one who healed her.</p>
+
+    <h2>Become a Certified Hijama Practitioner</h2>
+    <p>If this article has proven to be beneficial for you or to your near and dear ones, then please share it with those who are in great need of this type of information or even better if you want to produce such amazing results like above, then you can become a <strong>Certified Hijama Practitioner (CHP)</strong> from one of the leading Hijama Training Centers.</p>
+    <p>As a Hijama practitioner, you can have a fulfilling and beneficial career in this life and the next life as well. Some of the benefits are:</p>
+    <ul>
+      <li>You can help your family, friends, and society.</li>
+      <li>You can have a gratifying and flexible career.</li>
+      <li>You can take part in reviving the lost sunnah of the practice.</li>
+      <li>Earn Sadaqa Jaariya</li>
+      <li>Earn Halal income</li>
+      <li>You can support those diseases that fall under the category of non-treatable diseases.</li>
+      <li>Overcome the side-effects of modern allopathic medicine.</li>
+      <li>As a part of one of the recommended practices by the Holy Prophet, you can lead a spiritually rewarding life</li>
+      <li>Leave a legacy</li>
+    </ul>
+
+    <div style="background: #f0fdf4; padding: 30px; border-radius: 12px; margin: 20px 0; border-left: 4px solid #1c7c47;">
+      <h3 style="margin-top: 0; color: #1a2e1a; font-family: 'Playfair Display', serif;">Ready to Begin Your Journey?</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li style="margin: 12px 0;">
+          <strong>🎯 Free Webinar:</strong> 
+          <a href="https://hijama.hijamanation.com/webinar-reg2" target="_blank" rel="noopener noreferrer" style="color: #1c7c47; text-decoration: none; font-weight: 500;">
+            Listen to our free webinar and book your interview call now
+          </a>
+        </li>
+        <li style="margin: 12px 0;">
+          <strong>📧 Email:</strong> 
+          <a href="mailto:info@hijamanation.com" style="color: #1c7c47; text-decoration: none; font-weight: 500;">
+            info@hijamanation.com
+          </a>
+        </li>
+        <li style="margin: 12px 0;">
+          <strong>🌐 Website:</strong> 
+          <a href="https://www.hijamanation.com" target="_blank" rel="noopener noreferrer" style="color: #1c7c47; text-decoration: none; font-weight: 500;">
+            www.hijamanation.com
+          </a>
+        </li>
+        <li style="margin: 12px 0;">
+          <strong>📱 WhatsApp:</strong> 
+          <a href="tel:+447838614062" style="color: #1c7c47; text-decoration: none; font-weight: 500;">
+            +44 (0) 7838 614062
+          </a>
+        </li>
+        <li style="margin: 12px 0;">
+          <strong>🎓 Other Courses:</strong> 
+          <a href="https://www.hijamanationacademy.com/" target="_blank" rel="noopener noreferrer" style="color: #1c7c47; text-decoration: none; font-weight: 500;">
+            www.hijamanationacademy.com
+          </a>
+        </li>
       </ul>
-      <p>She was sick for several years and the major areas of concern were <strong>Neuropathy</strong>, and <strong>Congestive Heart Failure</strong>.</p>
-      <p>She also had a left knee replacement surgery which was not successful though, as a result, she has to use a power wheelchair as became 80-90% immobile due to her weak muscles and knees problems.</p>
-      <p>She was taking various medications. She was generally a strong willed person, but her illness had lowered her motivation in trying to get better.</p>
-      <p>She experienced Hijama Cupping Therapy before by a Non-Hijama Nation Practitioner but unfortunately did not experience much difference at the time. But recently, she decided to go for Hijama Cupping Therapy again with one of our Students Nilfera Redzic.</p>
-      <p>From this case study you will see how the human body is interconnected and how powerful natural methods can be to strengthen and revitalise the body again when there seems little hope for change.</p>
+    </div>
 
-      <h2>Treatment Plan and Sessions</h2>
-
-      <h3>First Session</h3>
-      <p>During the first session, moving cupping and fixed cupping was first applied on her entire back and top of the shoulders. As mentioned that with her previous Hijama therapy, she was unable to see the desired benefits, so this time, a detailed plan of sessions was conducted.</p>
-      <p>After the session, she was advised to alter her eating habits by adopting a healthier diet, like having more raw fruits and vegetables, and exercise more often. She was encouraged to continue having strong faith in Allah (SWT) and keep up Salah and daily supplications from the Quran and Sunnah and to give in Charity.</p>
-
-      <h4>Results of the First Session</h4>
-      <ul>
-        <li>She felt tired for 2 days after the session.</li>
-        <li>She slept a lot more whereas she couldn't do otherwise.</li>
-      </ul>
-
-      <h3>Second Session</h3>
-      <p>During the second session, they focused on the legs and feet so moving and fixed cupping were applied on her legs and feet to support the swelling. This was to enhance circulation again.</p>
-
-      <h4>Results of the Second Session</h4>
-      <ul>
-        <li>The same day after Hijama therapy, she started going to the bathroom very often to urinate. The same frequency of urination continued for at least a few days. This was great because urination is a form of cleansing and detoxing the body from impurities.</li>
-        <li>This was a good sign that Hijama actually worked on her this time since the diuretic medication she was taking was no longer affecting her.</li>
-        <li>Before her feet and legs were very big in size due to the swelling but you could see they began returning to their normal size.</li>
-        <li>Alhamdulillah, she felt happier and felt good.</li>
-      </ul>
-
-      <h3>Third Session</h3>
-      <p>During the third session, the process of Hijama for her head started. Firstly the cupping was fixed on neck area. Moving cupping and Hijama were also performed on the arms, especially on her shoulders, as she mentioned the feeling of pain on her shoulders.</p>
-
-      <h4>Results of the Third Session</h4>
-      <ul>
-        <li>She felt a little light headed after the session which settled fast and soon after she was feeling good again.</li>
-      </ul>
-
-      <h3>Fourth Session</h3>
-      <p>During the fourth session she experienced moving cupping which is like massage with the Hijama cups and reflexology.</p>
-
-      <h4>Results of the Fourth Session</h4>
-      <ul>
-        <li>She felt tired after that session too that just means her body is working hard in getting better and adjusting with the new changes happening but she did notice a lot of improvements from these sessions.</li>
-      </ul>
-
-      <h3>Fifth Session</h3>
-      <p>During the fifth session, fixed and moving cupping was applied on her back, reflexology on her feet and palms was conducted, and a facial massage was given.</p>
-
-      <h4>Results of the Fifth Session</h4>
-      <ul>
-        <li>Her condition was improving continuously.</li>
-        <li>MashaAllah, she felt positive changes in her body.</li>
-      </ul>
-
-      <h3>Sixth Session</h3>
-      <p>During the last session, Hijama therapy was applied on and around her major organs such as the kidneys to help her get rid of the massive movements of fluids and debris from the body that were causing her unease.</p>
-
-      <h2>Overall Results</h2>
-      <p>She was fortunate she decided to give Hijama another try. She suffered a lot and by grace of Allah she has seen drastic changes in such a short period of treatment and insha Allah there will be more positive changes to come if she continues.</p>
-      <ul>
-        <li><strong>Her swelling went down to 50-60%</strong></li>
-        <li><strong>She almost lost around 20 pounds</strong></li>
-        <li><strong>Her mobility and digestion also improved</strong></li>
-        <li><strong>Mentally, emotionally, and spiritually, she is doing much better</strong></li>
-        <li><strong>She is able to maintain her prayers</strong></li>
-        <li><strong>Her neuropathy is under control</strong></li>
-      </ul>
-      <p>The client had complete faith that she was healed due to Hijama therapy. She believes that Allah (SWT) is the one who healed her.</p>
-
-      <h2>Become a Certified Hijama Practitioner</h2>
-      <p>If this article has proven to be beneficial for you or to your near and dear ones, then please share it with those who are in great need of this type of information or even better if you want to produce such amazing results like above, then you can become a <strong>Certified Hijama Practitioner (CHP)</strong> from one of the leading Hijama Training Centers.</p>
-      <p>As a Hijama practitioner, you can have a fulfilling and beneficial career in this life and the next life as well. Some of the benefits are:</p>
-      <ul>
-        <li>You can help your family, friends, and society.</li>
-        <li>You can have a gratifying and flexible career.</li>
-        <li>You can take part in reviving the lost sunnah of the practice.</li>
-        <li>Earn Sadaqa Jaariya</li>
-        <li>Earn Halal income</li>
-        <li>You can support those diseases that fall under the category of non-treatable diseases.</li>
-        <li>Overcome the side-effects of modern allopathic medicine.</li>
-        <li>As a part of one of the recommended practices by the Holy Prophet, you can lead a spiritually rewarding life</li>
-        <li>Leave a legacy</li>
-      </ul>
-
-      <h3>Start Your Hijama Journey With Us Now!</h3>
-      <p>Do you wish to take Hijama Practitioner as your career? If yes, then join the Hijama Nation Team.</p>
-      <p>
-        <a href="https://hijama.hijamanation.com/webinar-reg2" target="_blank" rel="noopener noreferrer">
-          Listen to our free webinar and book your interview call now
-        </a>
-      </p>
-      <p>
-        Email us at: <a href="mailto:info@hijamanation.com">info@hijamanation.com</a>
-        <br />
-        Website: <a href="https://www.hijamanation.com" target="_blank" rel="noopener noreferrer">www.hijamanation.com</a>
-        <br />
-        Message or WhatsApp: +44 (0) 7838 614062
-        <br />
-        See our other courses too on: <a href="https://www.hijamanationacademy.com/" target="_blank" rel="noopener noreferrer">www.hijamanationacademy.com</a>
-      </p>
-      <p><strong>Thanks and wasallam.</strong></p>
-      <p><em>HN Team.</em></p>
-    `,
-    image: '/images/hijamahealth.png',
-    date: '2026-07-13',
-    updatedDate: '2026-07-13',
-    author: 'Hijama Nation',
-    category: 'Case Study',
-    tags: ['Hijama Therapy', 'Case Study', 'Diabetes', 'High Blood Pressure', 'Neuropathy', 'Congestive Heart Failure', 'Natural Healing', 'Sunnah', 'Wellness'],
-  },
+    <p><strong>Thanks and wasallam.</strong></p>
+    <p><em>HN Team.</em></p>
+  `,
+  image: '/images/hijamahealth.png',
+  date: '2026-07-13',
+  updatedDate: '2026-07-13',
+  author: 'Hijama Nation',
+  category: 'Case Study',
+  tags: ['Hijama Therapy', 'Case Study', 'Diabetes', 'High Blood Pressure', 'Neuropathy', 'Congestive Heart Failure', 'Natural Healing', 'Sunnah', 'Wellness'],
+},
 // ============================================================
 // BLOG 6 – My Hijama Journey - From Patient to Student (UPDATED WITH ANIMATED IMAGES)
 // ============================================================
@@ -686,14 +706,7 @@ export const blogPosts = [
     <p>I would say Hijama is not for all. It is for those who believe and trust in when the Prophet said <em>"Hijama Cupping on the back of the neck treat seventy-two illnesses"</em> (Collected by At-Tabarani). If you believe, you will achieve. May Allah grant us all blessings and spread the blessings of this sunnah so many more of us are able to help cure the ill around us.</p>
     <p>I am now looking forward to the Prophetic Medicine course with Hijama Nation. May Allah bless them for all their efforts in helping the Ummah, ameen.</p>
 
-    <h2>Start Your Hijama Journey Today</h2>
-    <p>If you want to revive this forgotten Sunnah and improve your health, wealth and family then you can with our Diploma.</p>
-    <p>
-      <a href="/hijama-course" style="display: inline-block; background: #1c7c47; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">
-        Enroll Now →
-      </a>
-    </p>
-    <p><em>Leave a Reply</em></p>
+   
   `,
   image: '/images/patient.png',
   date: '2026-07-13',
@@ -747,13 +760,7 @@ export const blogPosts = [
       <p><em>"I am so happy I tried Hijama, I would never think I would feel this way again. My body feels so light and energetic compared to before, I feel I have the memory of an Elephant now, I am so happy."</em></p>
     </blockquote>
 
-    <h2>Start Your Hijama Journey Today</h2>
-    <p>To find out more how you can become a <strong>Certified Hijama Therapist</strong> and help change yours and others lives like this sister's life has been changed then:</p>
-    <p>
-      <a href="/hijama-course" style="display: inline-block; background: #1c7c47; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">
-        Enroll Now →
-      </a>
-    </p>
+  
   `,
   image: '/images/memory.png',
   date: '2026-07-13',
@@ -807,13 +814,7 @@ export const blogPosts = [
     <p><strong>Wassalaam</strong></p>
     <p><em>Muddassar</em></p>
 
-    <h2>Start Your Hijama Journey Today</h2>
-    <p>Learn more about the proper protocols and techniques of Hijama by becoming a <strong>Certified Hijama Practitioner</strong> with Hijama Nation.</p>
-    <p>
-      <a href="/hijama-course" style="display: inline-block; background: #1c7c47; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">
-        Enroll Now →
-      </a>
-    </p>
+  
   `,
   image: '/images/fast.png',
   date: '2026-07-13',
@@ -868,14 +869,6 @@ export const blogPosts = [
       <li>Increase in righteous deeds and worship</li>
       <li>Revive the forgotten Sunnah of Hijama</li>
     </ul>
-
-    <h2>Start Your Hijama Journey Today</h2>
-    <p>Don't miss this opportunity to earn immense rewards during these blessed ten days. Enroll in our Hijama course and be part of reviving this beautiful Sunnah.</p>
-    <p>
-      <a href="/hijama-course" style="display: inline-block; background: #1c7c47; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: 600; transition: all 0.3s;">
-        Enroll Now →
-      </a>
-    </p>
 
     <p><strong>Take care</strong></p>
     <p><strong>Wassalaam</strong></p>
